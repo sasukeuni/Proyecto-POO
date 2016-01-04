@@ -20,54 +20,52 @@ public class AnimeClass extends Arte {
 //    private String rating;      //edad de visionado minimo recomendado(G(all ages), pg(children), PG-13, R-17, R+(adult))
     private String publicacion; //tv, ova(original video animation), ona(original net animation), movie, special
 
-    public AnimeClass(String titulo, String autor, String anno, String capitulos, String genero, String adaptacion, String rating, String publicacion) {
-        super(titulo, autor, capitulos, genero, rating);
+    public AnimeClass ( String titulo , String autor , String anno , String capitulos , String genero , String adaptacion , String rating , String publicacion ) {
+        super ( titulo , autor , capitulos , genero , rating );
         this.adaptacion = adaptacion;
         this.publicacion = publicacion;
     }
 
-    
-
-    public AnimeClass() {
-        System.out.println("Dame el titulo: ");
-        super.setTitulo();
-        System.out.println("Dame el autor");
-        super.setAutor();
-        System.out.println("Dame el año de publicacion del primer capitulo");
-        super.setAnno();
-        System.out.println("Dame el numero total de capitulos hasta el momento");
-        super.setCapitulos();
-        System.out.println("Dame el géreno primario del anime:");
-        super.setGenero();
-        setAdaptacion();
-        System.out.println("Cual es la edad recomendada de este anime? (G(all ages), pg(children), PG-13, R-17, R+(adult))");
-        super.setRating();
-        setPublicacion();
+    public AnimeClass () {
+        System.out.println ( "Dame el titulo: " );
+        super.setTitulo ();
+        System.out.println ( "Dame el autor" );
+        super.setAutor ();
+        System.out.println ( "Dame el año de publicacion del primer capitulo" );
+        super.setAnno ();
+        System.out.println ( "Dame el numero total de capitulos hasta el momento" );
+        super.setCapitulos ();
+        System.out.println ( "Dame el géreno primario del anime:" );
+        super.setGenero ();
+        setAdaptacion ();
+        System.out.println ( "Cual es la edad recomendada de este anime? (G(all ages), pg(children), PG-13, R-17, R+(adult))" );
+        super.setRating ();
+        setPublicacion ();
     }
 
-    public String getAdaptacion() {
+    public String getAdaptacion () {
         return adaptacion;
     }
 
-    public void setAdaptacion() {
+    public void setAdaptacion () {
         char x;
-        System.out.println("Este anime es una adaptacion de algun manga? s/n");
-        String siNo = Metodo.lector();
-        x = siNo.charAt(0);
-        if (x == 'S' || x == 's') {
-            adaptacion = Metodo.lector();
+        System.out.println ( "Este anime es una adaptacion de algun manga? s/n" );
+        String siNo = Metodo.lector ();
+        x = siNo.charAt ( 0 );
+        if ( x == 'S' || x == 's' ) {
+            adaptacion = Metodo.lector ();
         } else {
             adaptacion = "Es una serie original";
         }
     }
 
-    public String getPublicacion() {
+    public String getPublicacion () {
         return publicacion;
     }
 
-    public void setPublicacion() {
-        System.out.println("Que tipo de publicación ha tenido? (tv, ova(original video animation), ona(original net animation), movie, special)");
-        publicacion = Metodo.lector();
+    public void setPublicacion () {
+        System.out.println ( "Que tipo de publicación ha tenido? (tv, ova(original video animation), ona(original net animation), movie, special)" );
+        publicacion = Metodo.lector ();
     }
 
 }

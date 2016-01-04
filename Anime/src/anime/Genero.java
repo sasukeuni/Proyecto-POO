@@ -13,21 +13,21 @@ public class Genero {
 
     private String nombre;
 
-    public Genero(String nombre) {
+    public Genero ( String nombre ) {
         this.nombre = nombre;
     }
 
-    public Genero() {
-        setNombre();
+    public Genero () {
+        setNombre ();
     }
 
-    public String getNombre() {
+    public String getNombre () {
         return nombre;
     }
 
-    public void setNombre() {
-        System.out.println("Dame el nombre del género: ");
-        nombre = Metodo.lector();
+    public void setNombre () {
+        System.out.println ( "Dame el nombre del género: " );
+        nombre = Metodo.lector ();
     }
 
 }

@@ -18,7 +18,7 @@ public class Arte {
     private String genero;      //genero principal del anime
     private String rating;
 
-    public Arte(String titulo, String autor, String capitulos, String genero, String rating) {
+    public Arte ( String titulo , String autor , String capitulos , String genero , String rating ) {
         this.titulo = titulo;
         this.autor = autor;
         this.capitulos = capitulos;
@@ -26,69 +26,70 @@ public class Arte {
         this.rating = rating;
     }
 
-    public Arte(){
-        getTitulo();
-        getAutor();
-        getAnno();
-        getCapitulos();
-        getGenero();
-        getRating();
+    public Arte () {
+        getTitulo ();
+        getAutor ();
+        getAnno ();
+        getCapitulos ();
+        getGenero ();
+        getRating ();
     }
-    public String getGenero() {
+
+    public String getGenero () {
         return genero;
     }
 
-    public void setGenero() {
+    public void setGenero () {
 
-        genero = Metodo.lector();
+        genero = Metodo.lector ();
     }
 
-    public String getRating() {
+    public String getRating () {
         return rating;
     }
 
-    public void setRating() {
+    public void setRating () {
 
-        rating = Metodo.lector();
+        rating = Metodo.lector ();
     }
 
-    public String getTitulo() {
+    public String getTitulo () {
         return titulo;
     }
 
-    public void setTitulo() {
+    public void setTitulo () {
 
-        titulo = Metodo.lector();
+        titulo = Metodo.lector ();
     }
 
-    public String getAutor() {
+    public String getAutor () {
         return autor;
     }
 
-    public void setAutor() {
+    public void setAutor () {
 
-        autor = Metodo.lector();
+        autor = Metodo.lector ();
     }
 
-    public String getAnno() {
+    public String getAnno () {
         return anno;
     }
 
-    public void setAnno() {
+    public void setAnno () {
 
-        anno = Metodo.lector();
+        anno = Metodo.lector ();
     }
 
-    public String getCapitulos() {
+    public String getCapitulos () {
         return capitulos;
     }
 
-    public void setCapitulos() {
+    public void setCapitulos () {
 
         try {
-            capitulos = Metodo.lector();
-        } catch (NumberFormatException e) {
-            System.out.println("El dato dado no esta en el formato correcto");
+            capitulos = Metodo.lector ();
+        } catch ( NumberFormatException e ) {
+            System.out.println ( "El dato dado no esta en el formato correcto" );
         }
     }
 }

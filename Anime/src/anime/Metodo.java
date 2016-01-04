@@ -18,36 +18,36 @@ public class Metodo {
 
     static int ejecutado = 0;
 
-    static String lector() {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader flujoE = new BufferedReader(isr);
+    static String lector () {
+        InputStreamReader isr = new InputStreamReader ( System.in );
+        BufferedReader flujoE = new BufferedReader ( isr );
         String dato = "";
         try {
-            dato = flujoE.readLine();
-        } catch (IOException gaizki) {
+            dato = flujoE.readLine ();
+        } catch ( IOException gaizki ) {
         }
         return dato;
     }
 
-    static Integer edad(LocalDate annoNacimiento) {
+    static Integer edad ( LocalDate annoNacimiento ) {
 
-        LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.now ();
         int edad = 0;
         try {
-            edad = today.getYear() - annoNacimiento.getYear();
-        } catch (NullPointerException n) {
+            edad = today.getYear () - annoNacimiento.getYear ();
+        } catch ( NullPointerException n ) {
         }
         return edad;
     }
 
-    static void isVacio(String dato) {
+    static void isVacio ( String dato ) {
         try {
-            if (dato.length() != 0) {
-                System.out.println(dato);
-                ejecutado++;
+            if ( dato.length () != 0 ) {
+                System.out.println ( dato );
+                ejecutado ++;
             }
 
-        } catch (NullPointerException e) {
+        } catch ( NullPointerException e ) {
 
         }
 
