@@ -5,19 +5,17 @@
  */
 package anime;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author sasukeuni
  */
 public class AnimeClass extends Arte {
 
-//    private String titulo;      //titulo escrito en romanji
-//    private String autor;       //autor o director de la obra original
-//    private String anno;         //publicacion de primer capitulo
-//    private String capitulos;  //cantidad de capitulos hasta el momento
-//    private String genero;      //genero principal del anime
+    private static final Logger LOG = Logger.getLogger ( AnimeClass.class.getName () );
+
     private String adaptacion;  //si tiene base en un manga poner el titulo
-//    private String rating;      //edad de visionado minimo recomendado(G(all ages), pg(children), PG-13, R-17, R+(adult))
     private String publicacion; //tv, ova(original video animation), ona(original net animation), movie, special
 
     public AnimeClass ( String titulo , String autor , String anno , String capitulos , String genero , String adaptacion , String rating , String publicacion ) {
@@ -47,6 +45,10 @@ public class AnimeClass extends Arte {
         return adaptacion;
     }
 
+    public String getPublicacion () {
+        return publicacion;
+    }
+
     public void setAdaptacion () {
         char x;
         System.out.println ( "Este anime es una adaptacion de algun manga? s/n" );
@@ -57,10 +59,6 @@ public class AnimeClass extends Arte {
         } else {
             adaptacion = "Es una serie original";
         }
-    }
-
-    public String getPublicacion () {
-        return publicacion;
     }
 
     public void setPublicacion () {

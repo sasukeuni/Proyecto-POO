@@ -5,22 +5,20 @@
  */
 package anime;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author sasukeuni
  */
 public class Manga extends Arte {
 
+    private static final Logger LOG = Logger.getLogger ( Manga.class.getName () );
+
     private String publicadora; //tv, ova(original video animation), ona(original net animation), movie, special
 
     public Manga ( String titulo , String autor , String anno , String capitulos , String genero , String rating , String publicadora ) {
-//        this.titulo = titulo;
-//        this.autor = autor;
-//        this.anno = anno;
         super ( titulo , autor , capitulos , genero , rating );
-//        this.capitulos = capitulos;
-//        this.genero = genero;
-//        this.rating = rating;
         this.publicadora = publicadora;
     }
 
