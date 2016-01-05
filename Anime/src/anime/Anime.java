@@ -5,22 +5,17 @@
  */
 package anime;
 
-import java.util.logging.Logger;
-
 /**
  *
  * @author sasukeuni
  */
 public class Anime {
 
-    private static final Logger LOG = Logger.getLogger ( Anime.class.getName () );
-
     /**
      * @param args the command line arguments
      * <p>
      * @todo make a gui
-     * @todo find how to write de gotten data to a file and how to get back from
-     * there
+     * @todo find how to write de gotten data to a file and how to get back from there
      */
     public static void main ( String[] args ) {
         AnimeClass anime01 = new AnimeClass ( null , null , null , null , null , null , null , null );

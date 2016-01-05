@@ -5,21 +5,18 @@
  */
 package anime;
 
-import java.util.logging.Logger;
-
 /**
  *
  * @author sasukeuni
  */
 public class Arte {
-    private static final Logger LOG = Logger.getLogger ( Arte.class.getName () );
 
-    private String anno;      //publicacion de primer capitulo
+    private String titulo;      //titulo escrito en romanji
     private String autor;       //autor o director de la obra original
+    private String anno;         //publicacion de primer capitulo
     private String capitulos;  //cantidad de capitulos hasta el momento
     private String genero;      //genero principal del anime
     private String rating;
-    private String titulo; //titulo escrito en romanji
 
     public Arte ( String titulo , String autor , String capitulos , String genero , String rating ) {
         this.titulo = titulo;
@@ -38,38 +35,53 @@ public class Arte {
         getRating ();
     }
 
-    public String getAnno () {
-        return anno;
-    }
-
-    public String getAutor () {
-        return autor;
-    }
-
-    public String getCapitulos () {
-        return capitulos;
-    }
-
     public String getGenero () {
         return genero;
+    }
+
+    public void setGenero () {
+
+        genero = Metodo.lector ();
     }
 
     public String getRating () {
         return rating;
     }
 
+    public void setRating () {
+
+        rating = Metodo.lector ();
+    }
+
     public String getTitulo () {
         return titulo;
     }
 
-    public void setAnno () {
-        
-        anno = Metodo.lector ();
+    public void setTitulo () {
+
+        titulo = Metodo.lector ();
+    }
+
+    public String getAutor () {
+        return autor;
     }
 
     public void setAutor () {
 
         autor = Metodo.lector ();
+    }
+
+    public String getAnno () {
+        return anno;
+    }
+
+    public void setAnno () {
+
+        anno = Metodo.lector ();
+    }
+
+    public String getCapitulos () {
+        return capitulos;
     }
 
     public void setCapitulos () {
@@ -79,20 +91,5 @@ public class Arte {
         } catch ( NumberFormatException e ) {
             System.out.println ( "El dato dado no esta en el formato correcto" );
         }
-    }
-
-    public void setGenero () {
-        
-        genero = Metodo.lector ();
-    }
-
-    public void setRating () {
-        
-        rating = Metodo.lector ();
-    }
-    
-    public void setTitulo () {
-        
-        titulo = Metodo.lector ();
     }
 }

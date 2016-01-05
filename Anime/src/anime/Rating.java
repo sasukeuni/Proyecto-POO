@@ -5,15 +5,11 @@
  */
 package anime;
 
-import java.util.logging.Logger;
-
 /**
  *
  * @author sasukeuni
  */
 public class Rating {
-
-    private static final Logger LOG = Logger.getLogger ( Rating.class.getName () );
 
     private String valor;
 

@@ -7,19 +7,22 @@ package anime;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.logging.Logger;
 
 /**
  *
  * @author sasukeuni
  */
 public class ListaManga {
-    private static final Logger LOG = Logger.getLogger ( ListaManga.class.getName () );
 
     ArrayList<Manga> mangas;
 
     public ListaManga () {
         mangas = new ArrayList ();
+    }
+
+    public void newManga () {
+        Manga mng = new Manga ();
+        mangas.add ( mng );
     }
 
     public void getManga () {
@@ -37,10 +40,5 @@ public class ListaManga {
             System.out.println ( "MANGAREN PUBLIKATZAILEA: " + next.getPublicadora () );
             System.out.println ( "----------------------------------------------------------------" );
         }
-    }
-
-    public void newManga () {
-        Manga mng = new Manga ();
-        mangas.add ( mng );
     }
 }
