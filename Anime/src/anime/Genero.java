@@ -5,11 +5,14 @@
  */
 package anime;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author sasukeuni
  */
 public class Genero {
+    private static final Logger LOG = Logger.getLogger ( Genero.class.getName () );
 
     private String nombre;
 
