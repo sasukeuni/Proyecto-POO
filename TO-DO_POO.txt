@@ -1,0 +1,9 @@
+﻿TO-DO
+
+
+* Make cached data write to a file
+* Read data from a file
+* Update data from a file
+* Connect to a Database
+* Make a GUI (Graphic user interface)
+* Make a Documentation of all the changes and advances of the project
