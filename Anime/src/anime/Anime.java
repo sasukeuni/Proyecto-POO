@@ -30,15 +30,12 @@ public class Anime {
         boolean error, again;
 
 //        Menu
-        
 //        1. Anime
 //        2. Manga
 //        3. Autor
 //        4. Muestra los datos almacenados
 //        5. Salir
-        
 //        Fin Menu
-        
         do {
             error = false;
             again = false;
@@ -71,18 +68,13 @@ public class Anime {
                         System.out.println ( "\nLos datos almacenados son los siguientes: \n" );
                         Metodo.isVacio ( anime01.getTitulo () );
                         Metodo.isVacio ( anime01.getAnno () );
-                        Metodo.isVacio ( anime01.getCapitulos ().toString () );
+                        Metodo.isVacio ( anime01.getCapitulos () );
                         Metodo.isVacio ( anime01.getAutor () );
                         Metodo.isVacio ( anime01.getGenero () );
                         Metodo.isVacio ( anime01.getRating () );
                         Metodo.isVacio ( anime01.getPublicacion () );
                         Metodo.isVacio ( anime01.getAdaptacion () );
-                        /*
-                         * Metodo.isVacio(
-                         */
-                        manga01.getManga ()/*
-                                 * )
-                                 */;
+                        manga01.getManga ();
                         /*
                          * Metodo.isVacio(manga01.getAutor());
                          * Metodo.isVacio(manga01.getCapitulos().toString());

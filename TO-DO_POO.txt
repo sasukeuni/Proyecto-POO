@@ -1,6 +1,6 @@
 ﻿TO-DO
 
-
+* Make work the arraylist reader
 * Make cached data write to a file
 * Read data from a file
 * Update data from a file
