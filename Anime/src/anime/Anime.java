@@ -28,6 +28,17 @@ public class Anime {
         Autor autor01 = new Autor ( null , null , null );
         int aukera = 0;
         boolean error, again;
+
+//        Menu
+        
+//        1. Anime
+//        2. Manga
+//        3. Autor
+//        4. Muestra los datos almacenados
+//        5. Salir
+        
+//        Fin Menu
+        
         do {
             error = false;
             again = false;
