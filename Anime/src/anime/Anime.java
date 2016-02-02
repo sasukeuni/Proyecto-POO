@@ -2,64 +2,59 @@ package anime;
 
 import java.util.logging.Logger;
 
-public class Anime {
+public class Anime extends Arte {
 
     private static final Logger LOG = Logger.getLogger(Anime.class.getName());
 
-    public static void main(String[] args) {
-        AnimeClass anime01 = new AnimeClass(null, null, null, null, null, null, null, null);
-        ListaManga manga01 = new ListaManga();
-        Autor autor01 = new Autor(null, null, null);
-        int aukera = 0;
-        boolean error, again;
-        do {
-            error = false;
-            again = false;
-            System.out.println("1. Anime");
-            System.out.println("2. Manga");
-            System.out.println("3. Autor");
-            System.out.println("4. Muestra los datos almacenados");
-            System.out.println("5. Salir");
-            try {
-                aukera = Integer.parseInt(Metodo.lector());
-            } catch (NumberFormatException e) {
-                System.out.println("Has metido algo que no es un número");
-            }
-            switch(aukera) {
-                case 1:
-                    anime01 = new AnimeClass();
-                    break;
-                case 2:
-                    manga01.newManga();
-                    break;
-                case 3:
-                    autor01 = new Autor();
-                    break;
-                case 4:
-                    try {
-                        System.out.println("\nLos datos almacenados son los siguientes: \n");
-                        Metodo.isVacio(anime01.getTitulo());
-                        Metodo.isVacio(anime01.getAnno());
-                        Metodo.isVacio(anime01.getCapitulos());
-                        Metodo.isVacio(anime01.getAutor());
-                        Metodo.isVacio(anime01.getGenero());
-                        Metodo.isVacio(anime01.getRating());
-                        Metodo.isVacio(anime01.getPublicacion());
-                        Metodo.isVacio(anime01.getAdaptacion());
-                        manga01.getManga();
-                        Metodo.isVacio(autor01.getNombre());
-                        Metodo.isVacio(autor01.getEdad().toString());
-                        Metodo.isVacio(autor01.getBiografia());
-                    } catch (NullPointerException n) {
-                    }
-                    break;
-                case 5:
-                    again = true;
-                    break;
-                default:
-                    error = true;
-                    System.out.println("try again");
-            }
-        } while (error || !again);
+    private String adaptacion;
+
+    private String publicacion;
+
+    public Anime(String titulo, String autor, String anno, String capitulos, String genero, String adaptacion, String rating, String publicacion) {
+        super(titulo, autor, capitulos, genero, rating);
+        this.adaptacion = adaptacion;
+        this.publicacion = publicacion;
+    }
+
+    public Anime() {
+        System.out.println("Dame el titulo: ");
+        super.setTitulo();
+        System.out.println("Dame el autor");
+        super.setAutor();
+        System.out.println("Dame el año de publicacion del primer capitulo");
+        super.setAnno();
+        System.out.println("Dame el numero total de capitulos hasta el momento");
+        super.setCapitulos();
+        System.out.println("Dame el géreno primario del anime:");
+        super.setGenero();
+        setAdaptacion();
+        System.out.println("Cual es la edad recomendada de este anime? (G(all ages), pg(children), PG-13, R-17, R+(adult))");
+        super.setRating();
+        setPublicacion();
+    }
+
+    public String getAdaptacion() {
+        return adaptacion;
+    }
+
+    public String getPublicacion() {
+        return publicacion;
+    }
+
+    public void setAdaptacion() {
+        char x;
+        System.out.println("Este anime es una adaptacion de algun manga? s/n");
+        String siNo = Metodo.lector();
+        x = siNo.charAt(0);
+        if (x == 'S' || x == 's') {
+            adaptacion = Metodo.lector();
+        } else {
+            adaptacion = "Es una serie original";
+        }
+    }
+
+    public void setPublicacion() {
+        System.out.println("Que tipo de publicación ha tenido? (tv, ova(original video animation), ona(original net animation), movie, special)");
+        publicacion = Metodo.lector();
     }
 }
