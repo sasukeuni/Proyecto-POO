@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Anime">
+  <ClassDiagramComponents>
+    <Class name="Anime" package="anime" visibility="public" xPosition="1055.0" yPosition="607.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AnimeClass" package="anime" visibility="public" xPosition="220.0" yPosition="1137.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="adaptacion" type="String" visibility="private"/>
+        <Field name="publicacion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="autor"/>
+          <Argument type="String" name="anno"/>
+          <Argument type="String" name="capitulos"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="adaptacion"/>
+          <Argument type="String" name="rating"/>
+          <Argument type="String" name="publicacion"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAdaptacion" returnType="String" visibility="public"/>
+        <Method name="getPublicacion" returnType="String" visibility="public"/>
+        <Method name="setAdaptacion" returnType="void" visibility="public"/>
+        <Method name="setPublicacion" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Arte" package="anime" visibility="public" xPosition="1361.0" yPosition="1023.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="anno" type="String" visibility="private"/>
+        <Field name="autor" type="String" visibility="private"/>
+        <Field name="capitulos" type="String" visibility="private"/>
+        <Field name="genero" type="String" visibility="private"/>
+        <Field name="rating" type="String" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="autor"/>
+          <Argument type="String" name="capitulos"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="rating"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAnno" returnType="String" visibility="public"/>
+        <Method name="getAutor" returnType="String" visibility="public"/>
+        <Method name="getCapitulos" returnType="String" visibility="public"/>
+        <Method name="getGenero" returnType="String" visibility="public"/>
+        <Method name="getRating" returnType="String" visibility="public"/>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="setAnno" returnType="void" visibility="public"/>
+        <Method name="setAutor" returnType="void" visibility="public"/>
+        <Method name="setCapitulos" returnType="void" visibility="public"/>
+        <Method name="setGenero" returnType="void" visibility="public"/>
+        <Method name="setRating" returnType="void" visibility="public"/>
+        <Method name="setTitulo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Autor" package="anime" visibility="public" xPosition="2502.0" yPosition="59.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="cont" type="int" visibility="package" isStatic="true"/>
+        <Field name="CodAutor" type="Integer" visibility="private"/>
+        <Field name="biografia" type="String" visibility="private"/>
+        <Field name="fechaNacimiento" type="LocalDate" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="LocalDate" name="fechaNacimiento"/>
+          <Argument type="String" name="biografia"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getBiografia" returnType="String" visibility="public"/>
+        <Method name="getEdad" returnType="Integer" visibility="public"/>
+        <Method name="getFechaNacimiento" returnType="LocalDate" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setBiografia" returnType="void" visibility="public"/>
+        <Method name="setCodAutor" returnType="void" visibility="public"/>
+        <Method name="setFechaNacimiento" returnType="void" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Genero" package="anime" visibility="public" xPosition="1509.0" yPosition="209.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaManga" package="anime" visibility="public" xPosition="2450.0" yPosition="796.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="mangas" type="ArrayList&lt;Manga&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getManga" returnType="void" visibility="public"/>
+        <Method name="newManga" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manga" package="anime" visibility="public" xPosition="2227.0" yPosition="1166.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="publicadora" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="titulo"/>
+          <Argument type="String" name="autor"/>
+          <Argument type="String" name="anno"/>
+          <Argument type="String" name="capitulos"/>
+          <Argument type="String" name="genero"/>
+          <Argument type="String" name="rating"/>
+          <Argument type="String" name="publicadora"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPublicadora" returnType="String" visibility="public"/>
+        <Method name="setPublicadora" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Metodo" package="anime" visibility="public" xPosition="1413.0" yPosition="509.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="ejecutado" type="int" visibility="package" isStatic="true"/>
+        <Field name="archivo" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="campo1" type="String" visibility="private"/>
+        <Field name="campo2" type="String" visibility="private"/>
+        <Field name="campo3" type="String" visibility="private"/>
+        <Field name="campo4" type="String" visibility="private"/>
+        <Field name="campo5" type="String" visibility="private"/>
+        <Field name="campo6" type="String" visibility="private"/>
+        <Field name="campo7" type="String" visibility="private"/>
+        <Field name="campo8" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="edad" returnType="LocalDate" visibility="package" isStatic="true">
+          <Argument type="LocalDate" name="annoNacimiento"/>
+        </Method>
+        <Method name="isVacio" returnType="String" visibility="package" isStatic="true">
+          <Argument type="String" name="dato"/>
+        </Method>
+        <Method name="lector" returnType="String" visibility="package" isStatic="true"/>
+        <Method name="readXML" returnType="String" visibility="public">
+          <Argument type="String" name="xml"/>
+        </Method>
+        <Method name="saveToXML" returnType="String" visibility="public">
+          <Argument type="String" name="xml"/>
+        </Method>
+        <Method name="getTextValue" returnType="String" visibility="private">
+          <Argument type="String" name="def"/>
+          <Argument type="Element" name="doc"/>
+          <Argument type="String" name="tag"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Rating" package="anime" visibility="public" xPosition="820.0" yPosition="228.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="valor" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="valor"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getValor" returnType="String" visibility="public"/>
+        <Method name="setValor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaAnime" package="" visibility="public" xPosition="702.0" yPosition="744.0">
+      <Fields>
+        <Field name="animes" type="ArrayList&lt;AnimeClass&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAnime" returnType="void" visibility="public"/>
+        <Method name="newAnime" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaAutor" package="" visibility="public" xPosition="2124.0" yPosition="173.0">
+      <Fields>
+        <Field name="autores" type="ArrayList&lt;Autor&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAutor" returnType="void" visibility="public"/>
+        <Method name="newAutor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaRating" package="" visibility="public" xPosition="259.0" yPosition="247.0">
+      <Fields>
+        <Field name="edades" type="ArrayList&lt;Raitng&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getRating" returnType="void" visibility="public"/>
+        <Method name="newRating" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ListaGenero" package="" visibility="public" xPosition="1079.0" yPosition="228.0">
+      <Fields>
+        <Field name="generos" type="ArrayList&lt;Genero&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getAutor" returnType="void" visibility="public"/>
+        <Method name="newAutor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="edades" source="ListaRating" target="anime.Rating" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <HasRelation name="mangas" source="anime.ListaManga" target="anime.Manga" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Manga&gt;"/>
+    <HasRelation name="generos" source="ListaGenero" target="anime.Genero" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <HasRelation name="animes" source="ListaAnime" target="anime.AnimeClass" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <HasRelation name="autores" source="ListaAutor" target="anime.Autor" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="ArrayList"/>
+    <IsRelation name="is" source="anime.AnimeClass" target="anime.Arte"/>
+    <IsRelation name="is" source="anime.Manga" target="anime.Arte"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
