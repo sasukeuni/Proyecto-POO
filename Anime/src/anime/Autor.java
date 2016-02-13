@@ -3,17 +3,13 @@ package anime;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
-/**
- *
- * @author sasukeuni
- */
 public class Autor {
 
     private static final Logger LOG = Logger.getLogger(Autor.class.getName());
 
     static int cont = 0;
 
-    private Integer CodAutor;
+    private Integer codAutor;
 
     private String biografia;
 
@@ -59,9 +55,12 @@ public class Autor {
     }
 
     public void setCodAutor() {
-        CodAutor = cont;
+        codAutor = cont;
     }
 
+    public Integer getCodAutor(){
+        return codAutor;
+    }
     public void setFechaNacimiento() {
         System.out.println("Cual es la fecha de nacimiento de dicho autor? (YYYY-MM-DD)");
         try {

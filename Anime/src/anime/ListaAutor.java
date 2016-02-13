@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class ListaAutor {
 
-    private ArrayList<Autor> autores;
+    private final ArrayList<Autor> autores;
 
+    @SuppressWarnings("unchecked")
     public ListaAutor() {
-        autores = new ArrayList();
+        autores = new ArrayList<>();
     }
 
     public void getAutor() {
@@ -21,8 +22,8 @@ public class ListaAutor {
         }
     }
 
-    public void newAutor() {
-        Autor aut= new Autor();
+    public void setAutor() {
+        Autor aut = new Autor();
         autores.add(aut);
     }
 }

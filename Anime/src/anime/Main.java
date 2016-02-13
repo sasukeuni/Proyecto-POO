@@ -7,9 +7,11 @@ public class Main {
     private static final Logger LOG = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-        Anime anime01 = new Anime(null, null, null, null, null, null, null, null);
+        ListaAnime anime01 = new ListaAnime();
         ListaManga manga01 = new ListaManga();
-        Autor autor01 = new Autor(null, null, null);
+        ListaAutor autor01 = new ListaAutor();
+        ListaGenero genero01 = new ListaGenero();
+        ListaRating rating01 = new ListaRating();
         int aukera = 0;
         boolean error, again;
         do {
@@ -27,29 +29,22 @@ public class Main {
             }
             switch(aukera) {
                 case 1:
-                    anime01 = new Anime();
+                    anime01.setAnime();
                     break;
                 case 2:
-                    manga01.newManga();
+                    manga01.setManga();
                     break;
                 case 3:
-                    autor01 = new Autor();
+                    autor01.setAutor();
                     break;
                 case 4:
                     try {
                         System.out.println("\nLos datos almacenados son los siguientes: \n");
-                        Metodo.isVacio(anime01.getTitulo());
-                        Metodo.isVacio(anime01.getAnno());
-                        Metodo.isVacio(anime01.getCapitulos());
-                        Metodo.isVacio(anime01.getAutor());
-                        Metodo.isVacio(anime01.getGenero());
-                        Metodo.isVacio(anime01.getRating());
-                        Metodo.isVacio(anime01.getPublicacion());
-                        Metodo.isVacio(anime01.getAdaptacion());
+                        anime01.getAnime();
                         manga01.getManga();
-                        Metodo.isVacio(autor01.getNombre());
-                        Metodo.isVacio(autor01.getEdad().toString());
-                        Metodo.isVacio(autor01.getBiografia());
+                        autor01.getAutor();
+                        genero01.getGenero();
+                        rating01.getRating();
                     } catch (NullPointerException n) {
                     }
                     break;

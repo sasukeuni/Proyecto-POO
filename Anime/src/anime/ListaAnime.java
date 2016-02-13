@@ -1,14 +1,14 @@
 package anime;
 
-
 import java.util.ArrayList;
 
 public class ListaAnime {
 
-    private ArrayList<Anime> animes;
+    private final ArrayList<Anime> animes;
 
+    @SuppressWarnings("unchecked")
     public ListaAnime() {
-        animes = new ArrayList();
+        animes = new ArrayList<>();
     }
 
     public void getAnime() {
@@ -25,7 +25,7 @@ public class ListaAnime {
         }
     }
 
-    public void newAnime() {
+    public void setAnime() {
         Anime ani = new Anime();
         animes.add(ani);
     }

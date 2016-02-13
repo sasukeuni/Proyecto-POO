@@ -174,7 +174,7 @@
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="main" returnType="void" visibility="public" isStatic="true">
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
           <Argument type="String[]" name="args"/>
         </Method>
       </Methods>
@@ -208,10 +208,10 @@
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="edad" returnType="Integer" visibility="package" isStatic="true">
+        <Method name="edad" returnType="LocalDate" visibility="package" isStatic="true">
           <Argument type="LocalDate" name="annoNacimiento"/>
         </Method>
-        <Method name="isVacio" returnType="void" visibility="package" isStatic="true">
+        <Method name="isVacio" returnType="String" visibility="package" isStatic="true">
           <Argument type="String" name="dato"/>
         </Method>
         <Method name="lector" returnType="String" visibility="package" isStatic="true"/>
@@ -231,6 +231,17 @@
       <Methods>
         <Method name="getValor" returnType="String" visibility="public"/>
         <Method name="setValor" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="" visibility="public" xPosition="801.0" yPosition="154.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="menuAnime" returnType="void" visibility="public"/>
+        <Method name="menuManga" returnType="void" visibility="public"/>
+        <Method name="menuAutor" returnType="void" visibility="public"/>
+        <Method name="menuGenero" returnType="void" visibility="public"/>
+        <Method name="menuRating" returnType="void" visibility="public"/>
       </Methods>
     </Class>
   </ClassDiagramComponents>

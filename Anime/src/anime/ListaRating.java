@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class ListaRating {
 
-    private ArrayList<Rating> edades;
+    private final ArrayList<Rating> edades;
 
+    @SuppressWarnings("unchecked")
     public ListaRating() {
-        edades = new ArrayList();
+        edades = new ArrayList<>();
     }
 
     public void getRating() {
@@ -18,8 +19,8 @@ public class ListaRating {
         }
     }
 
-    public void newRating() {
-        Rating rat=new Rating();
+    public void setRating() {
+        Rating rat = new Rating();
         edades.add(rat);
     }
 }

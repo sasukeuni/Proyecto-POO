@@ -7,10 +7,11 @@ public class ListaManga {
 
     private static final Logger LOG = Logger.getLogger(ListaManga.class.getName());
 
-    ArrayList<Manga> mangas;
+    private final ArrayList<Manga> mangas;
 
+    @SuppressWarnings("unchecked")
     public ListaManga() {
-        mangas = new ArrayList();
+        mangas = new ArrayList<>();
     }
 
     public void getManga() {
@@ -27,7 +28,7 @@ public class ListaManga {
         }
     }
 
-    public void newManga() {
+    public void setManga() {
         Manga mng = new Manga();
         mangas.add(mng);
     }
