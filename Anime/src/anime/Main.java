@@ -1,7 +1,10 @@
 package anime;
 
 import java.util.logging.Logger;
-
+/**
+ * 
+ * @author sasukeuni
+ */
 public class Main {
 
     private static final Logger LOG = Logger.getLogger(Main.class.getName());
@@ -13,6 +16,7 @@ public class Main {
         ListaGenero genero01 = new ListaGenero();
         ListaRating rating01 = new ListaRating();
         int aukera = 0;
+        int aukera1 = 0;
         boolean error, again;
         do {
             error = false;
@@ -22,20 +26,43 @@ public class Main {
             System.out.println("3. Autor");
             System.out.println("4. Muestra los datos almacenados");
             System.out.println("5. Salir");
-            try {
-                aukera = Integer.parseInt(Metodo.lector());
-            } catch (NumberFormatException e) {
-                System.out.println("Has metido algo que no es un número");
-            }
-            switch(aukera) {
+
+            aukera = Lector.lectorInt();
+
+            switch (aukera) {
                 case 1:
-                    anime01.setAnime();
+                    Menu.menuAnime();
+
+                    aukera1 = Lector.lectorInt();
+
+                    switch (aukera1) {
+                        case 1:
+                            anime01.setAnime();
+                            break;
+                        case 2:
+                            anime01.returnAnime();
+                            break;
+                        case 3:
+                            int pos = 0,
+                             campo = 0;
+                            Menu.modificacionAnime();
+                            try {
+                                pos = Lector.lectorInt();
+                            } catch (NumberFormatException e) {
+                                System.out.println("Has metido algo que no es un número");
+                            }
+                            Menu.modSelAnime();
+
+                            campo = Lector.lectorInt();
+
+                            anime01.updateAnime(pos, campo);
+                    }
                     break;
                 case 2:
-                    manga01.setManga();
+                    Menu.menuManga();
                     break;
                 case 3:
-                    autor01.setAutor();
+                    Menu.menuAutor();
                     break;
                 case 4:
                     try {
@@ -53,7 +80,7 @@ public class Main {
                     break;
                 default:
                     error = true;
-                    System.out.println("try again");
+                    System.out.println("Esa opcion no esta entre las seleccionadas");
             }
         } while (error || !again);
     }

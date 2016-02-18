@@ -7,7 +7,10 @@ public class Rating {
     private static final Logger LOG = Logger.getLogger(Rating.class.getName());
 
     private String valor;
-
+/**
+ * 
+ * @param valor 
+ */
     public Rating(String valor) {
         this.valor = valor;
     }
@@ -22,6 +25,6 @@ public class Rating {
 
     public void setValor() {
         System.out.println("Que puntuación le das? ");
-        valor = Metodo.lector();
+        valor = Lector.lector();
     }
 }

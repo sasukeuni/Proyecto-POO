@@ -1,15 +1,20 @@
 package anime;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Metodo {
 
     private static final Logger LOG = Logger.getLogger(Metodo.class.getName());
 
+    @SuppressWarnings("PackageVisibleField")
     static int ejecutado = 0;
 
+    /**
+     *
+     * @param annoNacimiento
+     * @return
+     */
     static Integer edad(LocalDate annoNacimiento) {
         LocalDate today = LocalDate.now();
         int edad = 0;
@@ -30,9 +35,4 @@ public class Metodo {
         }
     }
 
-    static String lector() {
-        Scanner dato = new Scanner(System.in);
-        String leido=dato.nextLine();
-        return leido;
-    }
 }

@@ -7,7 +7,10 @@ public class Genero {
     private static final Logger LOG = Logger.getLogger(Genero.class.getName());
 
     private String nombre;
-
+/**
+ * 
+ * @param nombre 
+ */
     public Genero(String nombre) {
         this.nombre = nombre;
     }
@@ -22,6 +25,6 @@ public class Genero {
 
     public void setNombre() {
         System.out.println("Dame el nombre del género: ");
-        nombre = Metodo.lector();
+        nombre = Lector.lector();
     }
 }

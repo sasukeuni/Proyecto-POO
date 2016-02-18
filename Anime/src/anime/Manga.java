@@ -7,7 +7,16 @@ public class Manga extends Arte {
     private static final Logger LOG = Logger.getLogger(Manga.class.getName());
 
     private String publicadora;
-
+/**
+ * 
+ * @param titulo
+ * @param autor
+ * @param anno
+ * @param capitulos
+ * @param genero
+ * @param rating
+ * @param publicadora 
+ */
     public Manga(String titulo, String autor, String anno, String capitulos, String genero, String rating, String publicadora) {
         super(titulo, autor, capitulos, genero, rating);
         this.publicadora = publicadora;
@@ -35,6 +44,6 @@ public class Manga extends Arte {
     }
 
     public void setPublicadora() {
-        publicadora = Metodo.lector();
+        publicadora = Lector.lector();
     }
 }

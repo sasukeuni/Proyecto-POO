@@ -17,7 +17,14 @@ public class Arte {
     private String rating;
 
     private String titulo;
-
+/**
+ * 
+ * @param titulo
+ * @param autor
+ * @param capitulos
+ * @param genero
+ * @param rating 
+ */
     public Arte(String titulo, String autor, String capitulos, String genero, String rating) {
         this.titulo = titulo;
         this.autor = autor;
@@ -60,30 +67,30 @@ public class Arte {
     }
 
     public void setAnno() {
-        anno = Metodo.lector();
+        anno = Lector.lector();
     }
 
     public void setAutor() {
-        autor = Metodo.lector();
+        autor = Lector.lector();
     }
 
     public void setCapitulos() {
         try {
-            capitulos = Metodo.lector();
+            capitulos = Lector.lector();
         } catch (NumberFormatException e) {
             System.out.println("El dato dado no esta en el formato correcto");
         }
     }
 
     public void setGenero() {
-        genero = Metodo.lector();
+        genero = Lector.lector();
     }
 
     public void setRating() {
-        rating = Metodo.lector();
+        rating = Lector.lector();
     }
 
     public void setTitulo() {
-        titulo = Metodo.lector();
+        titulo = Lector.lector();
     }
 }

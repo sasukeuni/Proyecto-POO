@@ -2,6 +2,10 @@ package anime;
 
 import java.util.logging.Logger;
 
+/**
+ *
+ * @author sasukeuni
+ */
 public class Anime extends Arte {
 
     private static final Logger LOG = Logger.getLogger(Anime.class.getName());
@@ -10,6 +14,17 @@ public class Anime extends Arte {
 
     private String publicacion;
 
+    /**
+     *
+     * @param titulo
+     * @param autor
+     * @param anno
+     * @param capitulos
+     * @param genero
+     * @param adaptacion
+     * @param rating
+     * @param publicacion
+     */
     public Anime(String titulo, String autor, String anno, String capitulos, String genero, String adaptacion, String rating, String publicacion) {
         super(titulo, autor, capitulos, genero, rating);
         this.adaptacion = adaptacion;
@@ -44,10 +59,10 @@ public class Anime extends Arte {
     public void setAdaptacion() {
         char x;
         System.out.println("Este anime es una adaptacion de algun manga? s/n");
-        String siNo = Metodo.lector();
+        String siNo = Lector.lector();
         x = siNo.charAt(0);
         if (x == 'S' || x == 's') {
-            adaptacion = Metodo.lector();
+            adaptacion = Lector.lector();
         } else {
             adaptacion = "Es una serie original";
         }
@@ -55,6 +70,6 @@ public class Anime extends Arte {
 
     public void setPublicacion() {
         System.out.println("Que tipo de publicación ha tenido? (tv, ova(original video animation), ona(original net animation), movie, special)");
-        publicacion = Metodo.lector();
+        publicacion = Lector.lector();
     }
 }

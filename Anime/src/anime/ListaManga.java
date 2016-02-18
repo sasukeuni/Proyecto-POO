@@ -15,15 +15,15 @@ public class ListaManga {
     }
 
     public void getManga() {
-        for (int i = 0; i < mangas.size(); i++) {
+        for (Manga manga : mangas) {
             System.out.println("----------------------------------------------------------------");
-            System.out.println("MANGAREN IZENA: " + mangas.get(i).getTitulo());
-            System.out.println("MANGAREN AUTOREA: " + mangas.get(i).getAutor());
-            System.out.println("MANGAREN URTEA: " + mangas.get(i).getAnno());
-            System.out.println("MANGAREN KAPITULU KOPURUA: " + mangas.get(i).getCapitulos());
-            System.out.println("MANGAREN GENEROA: " + mangas.get(i).getGenero());
-            System.out.println("MANGAREN RATINGA : " + mangas.get(i).getRating());
-            System.out.println("MANGAREN PUBLIKATZAILEA: " + mangas.get(i).getPublicadora());
+            System.out.println("MANGAREN IZENA: " + manga.getTitulo());
+            System.out.println("MANGAREN AUTOREA: " + manga.getAutor());
+            System.out.println("MANGAREN URTEA: " + manga.getAnno());
+            System.out.println("MANGAREN KAPITULU KOPURUA: " + manga.getCapitulos());
+            System.out.println("MANGAREN GENEROA: " + manga.getGenero());
+            System.out.println("MANGAREN RATINGA : " + manga.getRating());
+            System.out.println("MANGAREN PUBLIKATZAILEA: " + manga.getPublicadora());
             System.out.println("----------------------------------------------------------------");
         }
     }

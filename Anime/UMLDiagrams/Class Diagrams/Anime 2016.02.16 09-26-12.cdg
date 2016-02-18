@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Anime">
   <ClassDiagramComponents>
-    <Class name="Anime" package="anime" visibility="public" xPosition="238.0" yPosition="876.0">
+    <Class name="Anime" package="anime" visibility="public" xPosition="39.0" yPosition="769.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="adaptacion" type="String" visibility="private"/>
@@ -28,7 +28,7 @@
         <Method name="setPublicacion" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Arte" package="anime" visibility="public" xPosition="1247.0" yPosition="762.0">
+    <Class name="Arte" package="anime" visibility="public" xPosition="885.0" yPosition="655.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="anno" type="String" visibility="private"/>
@@ -63,11 +63,11 @@
         <Method name="setTitulo" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Autor" package="anime" visibility="public" xPosition="1268.0" yPosition="274.0">
+    <Class name="Autor" package="anime" visibility="public" xPosition="2138.0" yPosition="405.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="cont" type="int" visibility="package" isStatic="true"/>
-        <Field name="CodAutor" type="Integer" visibility="private"/>
+        <Field name="codAutor" type="Integer" visibility="private"/>
         <Field name="biografia" type="String" visibility="private"/>
         <Field name="fechaNacimiento" type="LocalDate" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -87,11 +87,12 @@
         <Method name="getNombre" returnType="String" visibility="public"/>
         <Method name="setBiografia" returnType="void" visibility="public"/>
         <Method name="setCodAutor" returnType="void" visibility="public"/>
+        <Method name="getCodAutor" returnType="Integer" visibility="public"/>
         <Method name="setFechaNacimiento" returnType="void" visibility="public"/>
         <Method name="setNombre" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Genero" package="anime" visibility="public" xPosition="1820.0" yPosition="354.0">
+    <Class name="Genero" package="anime" visibility="public" xPosition="635.0" yPosition="255.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -107,79 +108,93 @@
         <Method name="setNombre" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ListaAnime" package="anime" visibility="public" xPosition="513.0" yPosition="562.0">
+    <Class name="Lector" package="anime" visibility="public" xPosition="1262.0" yPosition="293.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="lector" returnType="String" visibility="package" isStatic="true"/>
+        <Method name="lectorInt" returnType="int" visibility="package" isStatic="true"/>
+        <Method name="lectorFloat" returnType="float" visibility="package" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ListaAnime" package="anime" visibility="public" xPosition="314.0" yPosition="1137.0">
       <Fields>
-        <Field name="animes" type="ArrayList&lt;Anime&gt;" visibility="private"/>
+        <Field name="animes" type="ArrayList&lt;Anime&gt;" visibility="private" isFinal="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
         <Method name="getAnime" returnType="void" visibility="public"/>
-        <Method name="newAnime" returnType="void" visibility="public"/>
+        <Method name="setAnime" returnType="void" visibility="public"/>
+        <Method name="updateAnime" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="ListaAutor" package="anime" visibility="public" xPosition="1381.0" yPosition="20.0">
+    <Class name="ListaAutor" package="anime" visibility="public" xPosition="2251.0" yPosition="1137.0">
       <Fields>
-        <Field name="autores" type="ArrayList&lt;Autor&gt;" visibility="private"/>
+        <Field name="autores" type="ArrayList&lt;Autor&gt;" visibility="private" isFinal="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
         <Method name="getAutor" returnType="void" visibility="public"/>
-        <Method name="newAutor" returnType="void" visibility="public"/>
+        <Method name="setAutor" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ListaGenero" package="anime" visibility="public" xPosition="2373.0" yPosition="373.0">
+    <Class name="ListaGenero" package="anime" visibility="public" xPosition="623.0" yPosition="545.0">
       <Fields>
-        <Field name="generos" type="ArrayList&lt;Genero&gt;" visibility="private"/>
+        <Field name="generos" type="ArrayList&lt;Genero&gt;" visibility="private" isFinal="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
+        <Method name="getGenero" returnType="void" visibility="public"/>
+        <Method name="newGenero" returnType="void" visibility="public"/>
         <Method name="getAutor" returnType="void" visibility="public"/>
         <Method name="newAutor" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ListaManga" package="anime" visibility="public" xPosition="2134.0" yPosition="552.0">
+    <Class name="ListaManga" package="anime" visibility="public" xPosition="1669.0" yPosition="1137.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
-        <Field name="mangas" type="ArrayList&lt;Manga&gt;" visibility="package"/>
+        <Field name="mangas" type="ArrayList&lt;Manga&gt;" visibility="private" isFinal="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
         <Method name="getManga" returnType="void" visibility="public"/>
-        <Method name="newManga" returnType="void" visibility="public"/>
+        <Method name="setManga" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ListaRating" package="anime" visibility="public" xPosition="512.0" yPosition="373.0">
+    <Class name="ListaRating" package="anime" visibility="public" xPosition="1540.0" yPosition="564.0">
       <Fields>
-        <Field name="edades" type="ArrayList&lt;Rating&gt;" visibility="private"/>
+        <Field name="edades" type="ArrayList&lt;Rating&gt;" visibility="private" isFinal="true"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public"/>
       </Constructors>
       <Methods>
         <Method name="getRating" returnType="void" visibility="public"/>
-        <Method name="newRating" returnType="void" visibility="public"/>
+        <Method name="setRating" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Main" package="anime" visibility="public" xPosition="904.0" yPosition="392.0">
+    <Class name="Main" package="anime" visibility="public" xPosition="1007.0" yPosition="498.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
           <Argument type="String[]" name="args"/>
         </Method>
       </Methods>
     </Class>
-    <Class name="Manga" package="anime" visibility="public" xPosition="1911.0" yPosition="905.0">
+    <Class name="Manga" package="anime" visibility="public" xPosition="1446.0" yPosition="798.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="publicadora" type="String" visibility="private"/>
@@ -201,23 +216,34 @@
         <Method name="setPublicadora" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Metodo" package="anime" visibility="public" xPosition="854.0" yPosition="584.0">
+    <Class name="Menu" package="anime" visibility="public" xPosition="1017.0" yPosition="274.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="menuAnime" returnType="void" visibility="package" isStatic="true"/>
+        <Method name="menuAutor" returnType="void" visibility="package" isStatic="true"/>
+        <Method name="menuGenero" returnType="void" visibility="package" isStatic="true"/>
+        <Method name="menuManga" returnType="void" visibility="package" isStatic="true"/>
+        <Method name="menuRating" returnType="void" visibility="package" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Metodo" package="anime" visibility="public" xPosition="255.0" yPosition="469.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="ejecutado" type="int" visibility="package" isStatic="true"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="edad" returnType="LocalDate" visibility="package" isStatic="true">
+        <Method name="edad" returnType="Integer" visibility="package" isStatic="true">
           <Argument type="LocalDate" name="annoNacimiento"/>
         </Method>
-        <Method name="isVacio" returnType="String" visibility="package" isStatic="true">
+        <Method name="isVacio" returnType="void" visibility="package" isStatic="true">
           <Argument type="String" name="dato"/>
         </Method>
         <Method name="lector" returnType="String" visibility="package" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Rating" package="anime" visibility="public" xPosition="103.0" yPosition="354.0">
+    <Class name="Rating" package="anime" visibility="public" xPosition="1820.0" yPosition="545.0">
       <Fields>
         <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
         <Field name="valor" type="String" visibility="private"/>
@@ -233,25 +259,14 @@
         <Method name="setValor" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Menu" package="" visibility="public" xPosition="801.0" yPosition="154.0">
-      <Fields/>
-      <Constructors/>
-      <Methods>
-        <Method name="menuAnime" returnType="void" visibility="public"/>
-        <Method name="menuManga" returnType="void" visibility="public"/>
-        <Method name="menuAutor" returnType="void" visibility="public"/>
-        <Method name="menuGenero" returnType="void" visibility="public"/>
-        <Method name="menuRating" returnType="void" visibility="public"/>
-      </Methods>
-    </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="anime.Manga" target="anime.Arte"/>
-    <HasRelation name="autores" source="anime.ListaAutor" target="anime.Autor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Autor&gt;"/>
     <HasRelation name="animes" source="anime.ListaAnime" target="anime.Anime" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Anime&gt;"/>
-    <IsRelation name="is" source="anime.Anime" target="anime.Arte"/>
     <HasRelation name="mangas" source="anime.ListaManga" target="anime.Manga" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Manga&gt;"/>
-    <HasRelation name="generos" source="anime.ListaGenero" target="anime.Genero" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Genero&gt;"/>
+    <IsRelation name="is" source="anime.Anime" target="anime.Arte"/>
+    <IsRelation name="is" source="anime.Manga" target="anime.Arte"/>
     <HasRelation name="edades" source="anime.ListaRating" target="anime.Rating" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Rating&gt;"/>
+    <HasRelation name="generos" source="anime.ListaGenero" target="anime.Genero" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Genero&gt;"/>
+    <HasRelation name="autores" source="anime.ListaAutor" target="anime.Autor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Autor&gt;"/>
   </ClassDiagramRelations>
 </ClassDiagram>

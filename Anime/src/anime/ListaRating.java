@@ -12,9 +12,9 @@ public class ListaRating {
     }
 
     public void getRating() {
-        for (int i = 0; i < edades.size(); i++) {
+        for (Rating edade : edades) {
             System.out.println("----------------------------------------------------------------");
-            System.out.println("RATINGEN IZENA: " + edades.get(i).getValor());
+            System.out.println("RATINGEN IZENA: " + edade.getValor());
             System.out.println("----------------------------------------------------------------");
         }
     }

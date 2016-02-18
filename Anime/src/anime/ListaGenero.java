@@ -12,9 +12,9 @@ public class ListaGenero {
     }
 
     public void getGenero() {
-        for (int i = 0; i < generos.size(); i++) {
+        for (Genero genero : generos) {
             System.out.println("----------------------------------------------------------------");
-            System.out.println("GENEROAREN IZENA: " + generos.get(i).getNombre());
+            System.out.println("GENEROAREN IZENA: " + genero.getNombre());
             System.out.println("----------------------------------------------------------------");
         }
     }

@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author DM3-1-15 & SasukeUni
+ * @author SasukeUni
  */
 public class Lector {
         

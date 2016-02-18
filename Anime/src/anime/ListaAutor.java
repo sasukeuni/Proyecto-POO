@@ -12,12 +12,12 @@ public class ListaAutor {
     }
 
     public void getAutor() {
-        for (int i = 0; i < autores.size(); i++) {
+        for (Autor autore : autores) {
             System.out.println("----------------------------------------------------------------");
-            System.out.println("AUTOREAREN IZENA: " + autores.get(i).getNombre());
-            System.out.println("AUTOREAREN JAIOTZE URTEA: " + autores.get(i).getFechaNacimiento());
-            System.out.println("AUTOREAREN BIOGRAFIA: " + autores.get(i).getBiografia());
-            System.out.println("AUTOREAREN GAUR EGUNGO ADINA: " + autores.get(i).getEdad());
+            System.out.println("AUTOREAREN IZENA: " + autore.getNombre());
+            System.out.println("AUTOREAREN JAIOTZE URTEA: " + autore.getFechaNacimiento());
+            System.out.println("AUTOREAREN BIOGRAFIA: " + autore.getBiografia());
+            System.out.println("AUTOREAREN GAUR EGUNGO ADINA: " + autore.getEdad());
             System.out.println("----------------------------------------------------------------");
         }
     }
