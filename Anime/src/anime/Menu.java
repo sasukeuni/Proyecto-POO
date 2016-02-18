@@ -35,9 +35,9 @@ public class Menu {
                 + "2. Autor\n"
                 + "3. Año\n"
                 + "4. Capitulos\n"
-                + "5. genero\n"
-                + "6. rating\n"
-                + "7. publicacion\n"
+                + "5. Genero\n"
+                + "6. Rating\n"
+                + "7. Publicacion\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
     }
 
@@ -50,6 +50,30 @@ public class Menu {
                 + "4. Borrar un Autor\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
+    
+    static void modificacionAutor() {
+        ListaAutor autores = new ListaAutor();
+
+        System.out.println(""
+                + "Cual es el número del que quieres cambiar?\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
+        autores.returnAutor();
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+        );
+    }
+    
+    static void modSelAutor(){
+        System.out.println(""
+                + "Que campo quieres modificar?\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n"
+                + "1. Nombre\n"
+                + "2. Fecha Nacimiento\n"
+                + "3. Biografia\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
+    }
+    
+    
+    
 
     static void menuGenero() {
         System.out.println(""
@@ -70,6 +94,33 @@ public class Menu {
                 + "4. Borrar un Manga\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
+    
+    static void modificacionManga() {
+        ListaManga mangas = new ListaManga();
+
+        System.out.println(""
+                + "Cual es el número del que quieres cambiar?\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
+        mangas.returnManga();
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+        );
+    }
+    
+    static void modSelManga(){
+        System.out.println(""
+                + "Que campo quieres modificar?\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n"
+                + "1. Titulo\n"
+                + "2. Autor\n"
+                + "3. Año\n"
+                + "4. Capitulos\n"
+                + "5. Genero\n"
+                + "6. Rating\n"
+                + "7. Publicadora\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
+    }
+    
+    
 
     static void menuRating() {
         System.out.println(""

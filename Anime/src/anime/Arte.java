@@ -17,14 +17,15 @@ public class Arte {
     private String rating;
 
     private String titulo;
-/**
- * 
- * @param titulo
- * @param autor
- * @param capitulos
- * @param genero
- * @param rating 
- */
+
+    /**
+     *
+     * @param titulo
+     * @param autor
+     * @param capitulos
+     * @param genero
+     * @param rating
+     */
     public Arte(String titulo, String autor, String capitulos, String genero, String rating) {
         this.titulo = titulo;
         this.autor = autor;
@@ -63,18 +64,22 @@ public class Arte {
     }
 
     public String getTitulo() {
+
         return titulo;
     }
 
     public void setAnno() {
+        System.out.println("Dame el año de publicacion del primer capitulo");
         anno = Lector.lector();
     }
 
     public void setAutor() {
+        System.out.println("Dame el autor");
         autor = Lector.lector();
     }
 
     public void setCapitulos() {
+        System.out.println("Dame el numero total de capitulos hasta el momento");
         try {
             capitulos = Lector.lector();
         } catch (NumberFormatException e) {
@@ -83,14 +88,17 @@ public class Arte {
     }
 
     public void setGenero() {
+        System.out.println("Dame el géreno principal:");
         genero = Lector.lector();
     }
 
     public void setRating() {
+        System.out.println("Cual es la edad recomendada de este anime? (G(all ages), pg(children), PG-13, R-17, R+(adult))");
         rating = Lector.lector();
     }
 
     public void setTitulo() {
+        System.out.println("Dame el titulo: ");
         titulo = Lector.lector();
     }
 }

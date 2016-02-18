@@ -32,4 +32,40 @@ public class ListaManga {
         Manga mng = new Manga();
         mangas.add(mng);
     }
+
+    public void returnManga() {
+        for (int i = 0; i < mangas.size(); i++) {
+            System.out.println(i + ". " + mangas.get(i).getTitulo());
+        }
+    }
+
+    public void updateAutor(int objeto, int campo) {
+
+        switch (campo) {
+            case 1:
+                mangas.get(objeto).setTitulo();
+                break;
+            case 2:
+                mangas.get(objeto).setAutor();
+                break;
+            case 3:
+                mangas.get(objeto).setAnno();
+                break;
+            case 4:
+                mangas.get(objeto).setCapitulos();
+                break;
+            case 5:
+                mangas.get(objeto).setGenero();
+                break;
+            case 6:
+                mangas.get(objeto).setRating();
+                break;
+            case 7:
+                mangas.get(objeto).setPublicadora();
+                break;
+            default:
+                break;
+
+        }
+    }
 }

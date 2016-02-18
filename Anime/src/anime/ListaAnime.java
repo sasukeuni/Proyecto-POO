@@ -32,7 +32,7 @@ public class ListaAnime {
 
     public void returnAnime(){
         for (int i = 0; i < animes.size(); i++){
-            System.err.println(i+". "+ animes.get(i).getTitulo());
+            System.out.println(i+". "+ animes.get(i).getTitulo());
         }
     }
     public void updateAnime(int objeto, int campo) {

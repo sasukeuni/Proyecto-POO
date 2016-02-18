@@ -19,14 +19,26 @@ public class ListaGenero {
         }
     }
 
-    public void newGenero() {
+    public void setGenero() {
         Genero gen = new Genero();
         generos.add(gen);
     }
 
-    public void getAutor() {
+    public void returnGenero() {
+        for (int i = 0; i < generos.size(); i++) {
+            System.out.println(i + ". " + generos.get(i).getNombre());
+        }
     }
 
-    public void newAutor() {
+    public void updateGenero(int objeto, int campo) {
+
+        switch (campo) {
+            case 1:
+                generos.get(objeto).setNombre();
+                break;
+            default:
+                break;
+
+        }
     }
 }

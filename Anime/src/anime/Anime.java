@@ -32,18 +32,18 @@ public class Anime extends Arte {
     }
 
     public Anime() {
-        System.out.println("Dame el titulo: ");
+        
         super.setTitulo();
-        System.out.println("Dame el autor");
+        
         super.setAutor();
-        System.out.println("Dame el año de publicacion del primer capitulo");
+        
         super.setAnno();
-        System.out.println("Dame el numero total de capitulos hasta el momento");
+        
         super.setCapitulos();
-        System.out.println("Dame el géreno primario del anime:");
+        
         super.setGenero();
         setAdaptacion();
-        System.out.println("Cual es la edad recomendada de este anime? (G(all ages), pg(children), PG-13, R-17, R+(adult))");
+        
         super.setRating();
         setPublicacion();
     }

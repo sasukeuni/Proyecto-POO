@@ -26,4 +26,29 @@ public class ListaAutor {
         Autor aut = new Autor();
         autores.add(aut);
     }
+
+
+    public void returnAutor() {
+        for (int i = 0; i < autores.size(); i++) {
+            System.out.println(i + ". " + autores.get(i).getNombre());
+        }
+    }
+
+    public void updateAutor(int objeto, int campo) {
+
+        switch (campo) {
+            case 1:
+                autores.get(objeto).setNombre();
+                break;
+            case 2:
+                autores.get(objeto).setFechaNacimiento();
+                break;
+            case 3:
+                autores.get(objeto).setBiografia();
+                break;
+            default:
+                break;
+
+        }
+    }
 }
