@@ -8,7 +8,7 @@ public class Autor {
     private static final Logger LOG = Logger.getLogger(Autor.class.getName());
 
     @SuppressWarnings("PackageVisibleField")
-    static int cont = 0;
+    private static int cont = 0;
 
     private Integer codAutor;
 

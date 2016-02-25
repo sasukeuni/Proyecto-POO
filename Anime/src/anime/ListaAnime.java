@@ -30,13 +30,13 @@ public class ListaAnime {
         animes.add(ani);
     }
 
-    public void returnAnime(){
-        for (int i = 0; i < animes.size(); i++){
-            System.out.println(i+". "+ animes.get(i).getTitulo());
+    public void returnAnime() {
+        for (int i = 0; i < animes.size(); i++) {
+            System.out.println(i + ". " + animes.get(i).getTitulo());
         }
     }
+
     public void updateAnime(int objeto, int campo) {
-//        Anime ani = new Anime();
         switch (campo) {
             case 1:
                 animes.get(objeto).setTitulo();

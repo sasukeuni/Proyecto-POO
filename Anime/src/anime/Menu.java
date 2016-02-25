@@ -12,7 +12,7 @@ public class Menu {
                 + "1. Añadir un nuevo Anime\n"
                 + "2. Ver titulos\n"
                 + "3. Modificar un Anime\n"
-                + "4. Borrar un Anime"
+                + "4. Borrar un Anime\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
 

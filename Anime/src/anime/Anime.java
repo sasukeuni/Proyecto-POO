@@ -32,18 +32,13 @@ public class Anime extends Arte {
     }
 
     public Anime() {
-        
+
         super.setTitulo();
-        
         super.setAutor();
-        
         super.setAnno();
-        
         super.setCapitulos();
-        
         super.setGenero();
         setAdaptacion();
-        
         super.setRating();
         setPublicacion();
     }

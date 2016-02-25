@@ -1,8 +1,9 @@
 package anime;
 
 import java.util.logging.Logger;
+
 /**
- * 
+ *
  * @author sasukeuni
  */
 public class Main {
@@ -60,9 +61,59 @@ public class Main {
                     break;
                 case 2:
                     Menu.menuManga();
+                    aukera1 = Lector.lectorInt();
+
+                    switch (aukera1) {
+                        case 1:
+                            manga01.setManga();
+                            break;
+                        case 2:
+                            manga01.returnManga();
+                            break;
+                        case 3:
+                            int pos = 0,
+                             campo = 0;
+                            Menu.modificacionManga();
+                            try {
+                                pos = Lector.lectorInt();
+                            } catch (NumberFormatException e) {
+                                System.out.println("Has metido algo que no es un número");
+                            }
+                            Menu.modSelManga();
+
+                            campo = Lector.lectorInt();
+
+                            manga01.updateAutor(pos, campo);
+                    }
+
                     break;
                 case 3:
                     Menu.menuAutor();
+                    aukera1 = Lector.lectorInt();
+
+                    switch (aukera1) {
+                        case 1:
+                            autor01.setAutor();
+                            break;
+                        case 2:
+                            autor01.returnAutor();
+                            break;
+                        case 3:
+                            int pos = 0,
+                             campo = 0;
+                            Menu.modificacionAutor();
+                            try {
+                                pos = Lector.lectorInt();
+                            } catch (NumberFormatException e) {
+                                System.out.println("Has metido algo que no es un número");
+                            }
+                            Menu.modSelAutor();
+
+                            campo = Lector.lectorInt();
+
+                            autor01.updateAutor(pos, campo);
+                    }
+
                     break;
                 case 4:
                     try {

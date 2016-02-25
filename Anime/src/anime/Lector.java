@@ -12,23 +12,29 @@ import java.util.Scanner;
  * @author SasukeUni
  */
 public class Lector {
-        
+
     static String lector() {
         Scanner dato = new Scanner(System.in);
-        String leido=dato.nextLine();
+        String leido = dato.nextLine();
         return leido;
     }
-    
+
     static int lectorInt() {
-	Scanner dato = new Scanner(System.in);
-	int leido=dato.nextInt();
-	return leido;
+        int leido = -1;
+        Scanner dato = new Scanner(System.in);
+        if (dato.hasNextInt()) {
+
+            leido = dato.nextInt();
+        }
+        return leido;
     }
-    
+
     static float lectorFloat() {
-	Scanner dato = new Scanner(System.in);
-	float leido=dato.nextFloat();
-	return leido;
+        float leido = -1;
+        Scanner dato = new Scanner(System.in);
+        if (dato.hasNextFloat()) {
+            leido = dato.nextFloat();
+        }
+        return leido;
     }
 }
-

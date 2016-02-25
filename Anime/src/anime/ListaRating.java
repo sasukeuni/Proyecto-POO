@@ -23,4 +23,23 @@ public class ListaRating {
         Rating rat = new Rating();
         edades.add(rat);
     }
+    
+    public void returnRating() {
+        for (int i = 0; i < edades.size(); i++) {
+            System.out.println(i + ". " + edades.get(i).getValor());
+        }
+    }
+
+    public void updateGenero(int objeto, int campo) {
+
+        switch (campo) {
+            case 1:
+                edades.get(objeto).getClass();
+                break;
+            default:
+                break;
+
+        }
+    }
+    
 }
