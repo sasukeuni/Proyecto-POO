@@ -22,26 +22,22 @@ public class Main {
         do {
             error = false;
             again = false;
-            System.out.println("1. Anime");
-            System.out.println("2. Manga");
-            System.out.println("3. Autor");
-            System.out.println("4. Muestra los datos almacenados");
-            System.out.println("5. Salir");
-
+            Menu.menuMain();
             aukera = Lector.lectorInt();
 
             switch (aukera) {
-                case 1:
+                case 1: {
                     Menu.menuAnime();
 
                     aukera1 = Lector.lectorInt();
 
                     switch (aukera1) {
                         case 1:
-                            anime01.setAnime();
+                            Metodo.crearObjectFile("Anime.txt");
+//                            anime01.setAnime();
                             break;
                         case 2:
-                            anime01.returnAnime();
+                            Metodo.leerObjectFile("Anime.txt");
                             break;
                         case 3:
                             int pos = 0,
@@ -59,16 +55,17 @@ public class Main {
                             anime01.updateAnime(pos, campo);
                     }
                     break;
-                case 2:
+                }
+                case 2: {
                     Menu.menuManga();
                     aukera1 = Lector.lectorInt();
 
                     switch (aukera1) {
                         case 1:
-                            manga01.setManga();
+                            Metodo.crearObjectFile("Manga.txt");
                             break;
                         case 2:
-                            manga01.returnManga();
+                            Metodo.leerObjectFile("Manga.txt");
                             break;
                         case 3:
                             int pos = 0,
@@ -87,17 +84,17 @@ public class Main {
                     }
 
                     break;
-                case 3:
+                }
+                case 3: {
                     Menu.menuAutor();
                     aukera1 = Lector.lectorInt();
 
                     switch (aukera1) {
                         case 1:
-                            autor01.setAutor();
+                            Metodo.crearObjectFile("Autor.txt");
                             break;
                         case 2:
-                            autor01.returnAutor();
-                            break;
+                            Metodo.leerObjectFile("Autor.txt");
                         case 3:
                             int pos = 0,
                              campo = 0;
@@ -115,7 +112,8 @@ public class Main {
                     }
 
                     break;
-                case 4:
+                }
+                case 4: {
                     try {
                         System.out.println("\nLos datos almacenados son los siguientes: \n");
                         anime01.getAnime();
@@ -126,6 +124,7 @@ public class Main {
                     } catch (NullPointerException n) {
                     }
                     break;
+                }
                 case 5:
                     again = true;
                     break;

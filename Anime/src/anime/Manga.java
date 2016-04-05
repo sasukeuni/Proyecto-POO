@@ -1,8 +1,9 @@
 package anime;
 
+import java.io.Serializable;
 import java.util.logging.Logger;
 
-public class Manga extends Arte {
+public class Manga extends Arte implements Serializable {
 
     private static final Logger LOG = Logger.getLogger(Manga.class.getName());
 

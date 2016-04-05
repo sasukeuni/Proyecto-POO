@@ -1,12 +1,13 @@
 package anime;
 
+import java.io.Serializable;
 import java.util.logging.Logger;
 
 /**
  *
  * @author sasukeuni
  */
-public class Anime extends Arte {
+public class Anime extends Arte implements Serializable {
 
     private static final Logger LOG = Logger.getLogger(Anime.class.getName());
 
@@ -33,13 +34,8 @@ public class Anime extends Arte {
 
     public Anime() {
 
-        super.setTitulo();
-        super.setAutor();
-        super.setAnno();
-        super.setCapitulos();
-        super.setGenero();
+        super();
         setAdaptacion();
-        super.setRating();
         setPublicacion();
     }
 

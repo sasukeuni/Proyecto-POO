@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListaAnime {
 
-    private final ArrayList<Anime> animes;
+    private ArrayList<Anime> animes;
 
     @SuppressWarnings("unchecked")
     public ListaAnime() {
@@ -31,8 +31,12 @@ public class ListaAnime {
     }
 
     public void returnAnime() {
-        for (int i = 0; i < animes.size(); i++) {
-            System.out.println(i + ". " + animes.get(i).getTitulo());
+        if (!animes.isEmpty()) {
+            for (int i = 0; i <= animes.size() - 1; i++) {
+                System.out.println(i + ". " + animes.get(i).getTitulo());
+            }
+        } else {
+            System.out.println("No hay ninguno almacenado");
         }
     }
 

@@ -1,11 +1,8 @@
 package anime;
 
-import java.util.logging.Logger;
-
 public class Arte {
 
-    private static final Logger LOG = Logger.getLogger(Arte.class.getName());
-
+    //private static final Logger LOG = Logger.getLogger(Arte.class.getName());
     private String anno;
 
     private String autor;
@@ -35,12 +32,12 @@ public class Arte {
     }
 
     public Arte() {
-        getTitulo();
-        getAutor();
-        getAnno();
-        getCapitulos();
-        getGenero();
-        getRating();
+        setTitulo();
+        setAutor();
+        setAnno();
+        setCapitulos();
+        setGenero();
+        setRating();
     }
 
     public String getAnno() {

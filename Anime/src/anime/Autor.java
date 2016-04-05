@@ -1,9 +1,10 @@
 package anime;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
-public class Autor {
+public class Autor implements Serializable{
 
     private static final Logger LOG = Logger.getLogger(Autor.class.getName());
 

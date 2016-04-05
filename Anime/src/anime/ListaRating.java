@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListaRating {
 
-    private final ArrayList<Rating> edades;
+    private ArrayList<Rating> edades;
 
     @SuppressWarnings("unchecked")
     public ListaRating() {
@@ -23,10 +23,14 @@ public class ListaRating {
         Rating rat = new Rating();
         edades.add(rat);
     }
-    
+
     public void returnRating() {
-        for (int i = 0; i < edades.size(); i++) {
-            System.out.println(i + ". " + edades.get(i).getValor());
+        if (!edades.isEmpty()) {
+            for (int i = 0; i < edades.size() - 1; i++) {
+                System.out.println("\n" + i + ". " + edades.get(i).getValor());
+            }
+        } else {
+            System.out.println("No hay ninguno almacenado");
         }
     }
 
@@ -41,5 +45,5 @@ public class ListaRating {
 
         }
     }
-    
+
 }

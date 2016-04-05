@@ -6,6 +6,16 @@ package anime;
  */
 public class Menu {
 
+    static void menuMain(){
+        System.out.println(""
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n"
+                + "1. Anime\n"
+                + "2. Manga\n"
+                + "3. Autor\n"
+                + "4. Muestra los datos almacenados\n"
+                + "5. Salir\n"
+                + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
+    }
     static void menuAnime() {
         System.out.println(""
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n"
@@ -13,6 +23,7 @@ public class Menu {
                 + "2. Ver titulos\n"
                 + "3. Modificar un Anime\n"
                 + "4. Borrar un Anime\n"
+                + "5. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
 
@@ -38,6 +49,7 @@ public class Menu {
                 + "5. Genero\n"
                 + "6. Rating\n"
                 + "7. Publicacion\n"
+                + "8. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
     }
 
@@ -48,6 +60,7 @@ public class Menu {
                 + "2. Ver titulos\n"
                 + "3. Modificar un Autor\n"
                 + "4. Borrar un Autor\n"
+                + "5. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
     
@@ -69,6 +82,7 @@ public class Menu {
                 + "1. Nombre\n"
                 + "2. Fecha Nacimiento\n"
                 + "3. Biografia\n"
+                + "4. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
     }
     
@@ -82,6 +96,7 @@ public class Menu {
                 + "2. Ver titulos\n"
                 + "3. Modificar un Genero\n"
                 + "4. Borrar un Genero\n"
+                + "5. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
 
@@ -92,6 +107,7 @@ public class Menu {
                 + "2. Ver titulos\n"
                 + "3. Modificar un Manga\n"
                 + "4. Borrar un Manga\n"
+                + "5. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
     
@@ -117,6 +133,7 @@ public class Menu {
                 + "5. Genero\n"
                 + "6. Rating\n"
                 + "7. Publicadora\n"
+                + "8. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n");
     }
     
@@ -129,6 +146,7 @@ public class Menu {
                 + "2. Ver titulos\n"
                 + "3. Modificar un Rating\n"
                 + "4. Borrar un Rating\n"
+                + "5. Inicio\n"
                 + "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
 }

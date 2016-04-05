@@ -7,7 +7,7 @@ public class ListaManga {
 
     private static final Logger LOG = Logger.getLogger(ListaManga.class.getName());
 
-    private final ArrayList<Manga> mangas;
+    private ArrayList<Manga> mangas;
 
     @SuppressWarnings("unchecked")
     public ListaManga() {
@@ -34,8 +34,12 @@ public class ListaManga {
     }
 
     public void returnManga() {
-        for (int i = 0; i < mangas.size(); i++) {
-            System.out.println(i + ". " + mangas.get(i).getTitulo());
+        if (!mangas.isEmpty()) {
+            for (int i = 0; i <= mangas.size() - 1; i++) {
+                System.out.println(i + ". " + mangas.get(i).getTitulo());
+            }
+        } else {
+            System.out.println("No hay ninguno almacenado");
         }
     }
 

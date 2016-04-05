@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListaGenero {
 
-    private final ArrayList<Genero> generos;
+    private ArrayList<Genero> generos;
 
     @SuppressWarnings("unchecked")
     public ListaGenero() {
@@ -25,8 +25,12 @@ public class ListaGenero {
     }
 
     public void returnGenero() {
-        for (int i = 0; i < generos.size(); i++) {
-            System.out.println(i + ". " + generos.get(i).getNombre());
+        if (!generos.isEmpty()) {
+            for (int i = 0; i < generos.size() - 1; i++) {
+                System.out.println(i + ". " + generos.get(i).getNombre());
+            }
+        } else {
+            System.out.println("No hay ninguno almacenado");
         }
     }
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListaAutor {
 
-    private final ArrayList<Autor> autores;
+    private ArrayList<Autor> autores;
 
     @SuppressWarnings("unchecked")
     public ListaAutor() {
@@ -27,10 +27,13 @@ public class ListaAutor {
         autores.add(aut);
     }
 
-
     public void returnAutor() {
-        for (int i = 0; i < autores.size(); i++) {
-            System.out.println(i + ". " + autores.get(i).getNombre());
+        if (!autores.isEmpty()) {
+            for (int i = 0; i < autores.size() - 1; i++) {
+                System.out.println(i + ". " + autores.get(i).getNombre());
+            }
+        } else {
+            System.out.println("No hay ninguno almacenado");
         }
     }
 
