@@ -10,6 +10,7 @@ public class Autor implements Serializable{
 
     @SuppressWarnings("PackageVisibleField")
     private static int cont = 0;
+    private static final long serialVersionUID = 1L;
 
     private Integer codAutor;
 
@@ -25,6 +26,7 @@ public class Autor implements Serializable{
  * @param biografia 
  */
     public Autor(String nombre, LocalDate fechaNacimiento, String biografia) {
+        setCodAutor();
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.biografia = biografia;
@@ -32,6 +34,7 @@ public class Autor implements Serializable{
     }
 
     public Autor() {
+        setCodAutor();
         setNombre();
         setFechaNacimiento();
         setBiografia();

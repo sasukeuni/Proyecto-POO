@@ -1,6 +1,9 @@
 package anime;
 
-public class Arte {
+import java.io.Serializable;
+
+public class Arte implements Serializable{
+    private static final long serialVersionUID = 1L;
 
     //private static final Logger LOG = Logger.getLogger(Arte.class.getName());
     private String anno;

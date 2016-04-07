@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 public class Manga extends Arte implements Serializable {
 
     private static final Logger LOG = Logger.getLogger(Manga.class.getName());
+    private static final long serialVersionUID = 1L;
 
     private String publicadora;
 

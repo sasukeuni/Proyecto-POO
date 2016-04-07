@@ -16,8 +16,8 @@ public class Main {
         ListaAutor autor01 = new ListaAutor();
         ListaGenero genero01 = new ListaGenero();
         ListaRating rating01 = new ListaRating();
-        int aukera = 0;
-        int aukera1 = 0;
+        int aukera;
+        int aukera1;
         boolean error, again;
         do {
             error = false;
@@ -41,7 +41,7 @@ public class Main {
                             break;
                         case 3:
                             int pos = 0,
-                             campo = 0;
+                             campo;
                             Menu.modificacionAnime();
                             try {
                                 pos = Lector.lectorInt();
@@ -69,7 +69,7 @@ public class Main {
                             break;
                         case 3:
                             int pos = 0,
-                             campo = 0;
+                             campo;
                             Menu.modificacionManga();
                             try {
                                 pos = Lector.lectorInt();
@@ -95,9 +95,10 @@ public class Main {
                             break;
                         case 2:
                             Metodo.leerObjectFile("Autor.txt");
+                            break;
                         case 3:
                             int pos = 0,
-                             campo = 0;
+                             campo;
                             Menu.modificacionAutor();
                             try {
                                 pos = Lector.lectorInt();

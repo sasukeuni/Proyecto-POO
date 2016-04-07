@@ -55,13 +55,26 @@ public class Metodo {
                         Anime an = new Anime();
                         oos.writeObject(an);
                         oos.close();
-                        eos.close();
+//                        eos.close();
                         break;
-                    /**
-                     * case "Autor.txt": Autor au = new Autor();
-                     * oos.writeObject(au); break; case "Manga.txt": Manga ma =
-                     * new Manga(); oos.writeObject(ma); break;
-                     */
+
+                    case "Autor.txt":
+                        eos = new FileOutputStream("Autor.txt", true);
+                        oos = new MiObjectOutputStream(eos);
+                        Autor au = new Autor();
+                        oos.writeObject(au);
+                        oos.close();
+//                        eos.close();
+                        break;
+                    case "Manga.txt":
+                        eos = new FileOutputStream("Manga.txt", true);
+                        oos = new MiObjectOutputStream(eos);
+                        Manga ma = new Manga();
+                        oos.writeObject(ma);
+                        oos.close();
+//                        eos.close();
+                        break;
+
                 }
 
             }
@@ -87,17 +100,23 @@ public class Metodo {
                 case "Anime.txt":
 
                     while (eos.read() != -1) {
-                        anime.add((Anime) ois.readObject());
+                        Anime an = (Anime)ois.readObject();
+                        anime.add(an);
+                        ois.close();
                     }
                     break;
                 case "Autor.txt":
                     while (eos.read() != -1) {
-                        autor.add((Autor) ois.readObject());
+                        Autor au = (Autor) ois.readObject();
+                        autor.add(au);
+                        ois.close();
                     }
                     break;
                 case "Manga.txt":
                     while (eos.read() != -1) {
-                        manga.add((Manga) ois.readObject());
+                        Manga ma = (Manga) ois.readObject();
+                        manga.add(ma);
+                        ois.close();
                     }
                     break;
             }

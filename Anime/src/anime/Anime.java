@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 public class Anime extends Arte implements Serializable {
 
     private static final Logger LOG = Logger.getLogger(Anime.class.getName());
+    private static final long serialVersionUID = 1L;
 
     private String adaptacion;
 
