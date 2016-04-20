@@ -37,7 +37,7 @@ public class Main {
 //                            anime01.setAnime();
                             break;
                         case 2:
-                            Metodo.leerObjectFile("Anime.txt");
+                            Metodo.leerObjectFile("src/anime/Anime.txt");
                             break;
                         case 3:
                             int pos = 0,
@@ -65,7 +65,7 @@ public class Main {
                             Metodo.crearObjectFile("Manga.txt");
                             break;
                         case 2:
-                            Metodo.leerObjectFile("Manga.txt");
+                            Metodo.leerObjectFile("src/anime/Manga.txt");
                             break;
                         case 3:
                             int pos = 0,
@@ -94,7 +94,7 @@ public class Main {
                             Metodo.crearObjectFile("Autor.txt");
                             break;
                         case 2:
-                            Metodo.leerObjectFile("Autor.txt");
+                            Metodo.leerObjectFile("src/anime/Autor.txt");
                             break;
                         case 3:
                             int pos = 0,

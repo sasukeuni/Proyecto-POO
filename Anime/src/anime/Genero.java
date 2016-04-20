@@ -1,10 +1,9 @@
 package anime;
 
-import java.util.logging.Logger;
+import java.io.Serializable;
 
-public class Genero {
+public class Genero implements Serializable{
 
-    private static final Logger LOG = Logger.getLogger(Genero.class.getName());
 
     private String nombre;
 /**

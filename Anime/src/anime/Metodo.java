@@ -6,14 +6,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 public class Metodo {
 
-    private static final Logger LOG = Logger.getLogger(Metodo.class.getName());
-
-    @SuppressWarnings("PackageVisibleField")
-    static int ejecutado = 0;
+    private static int ejecutado = 0;
 
     /**
      *
@@ -46,33 +42,34 @@ public class Metodo {
      */
     public static void crearObjectFile(String fichero) {
         try {
-
+            FileOutputStream eos;
+            MiObjectOutputStream oos;
             for (int i = 0; i < 1; i++) {
                 switch (fichero) {
                     case "Anime.txt":
-                        FileOutputStream eos = new FileOutputStream("Anime.txt", true);
-                        MiObjectOutputStream oos = new MiObjectOutputStream(eos);
+                        eos = new FileOutputStream("src/anime/Anime.txt", true);
+                        oos = new MiObjectOutputStream(eos);
                         Anime an = new Anime();
                         oos.writeObject(an);
                         oos.close();
-//                        eos.close();
+                        eos.close();
                         break;
 
                     case "Autor.txt":
-                        eos = new FileOutputStream("Autor.txt", true);
+                        eos = new FileOutputStream("src/anime/Autor.txt", true);
                         oos = new MiObjectOutputStream(eos);
                         Autor au = new Autor();
                         oos.writeObject(au);
                         oos.close();
-//                        eos.close();
+                        eos.close();
                         break;
                     case "Manga.txt":
-                        eos = new FileOutputStream("Manga.txt", true);
+                        eos = new FileOutputStream("src/anime/Manga.txt", true);
                         oos = new MiObjectOutputStream(eos);
                         Manga ma = new Manga();
                         oos.writeObject(ma);
                         oos.close();
-//                        eos.close();
+                        eos.close();
                         break;
 
                 }
@@ -88,34 +85,34 @@ public class Metodo {
      * @param fichero
      */
     public static void leerObjectFile(String fichero) {
-        ArrayList<Anime> anime = null;
-        ArrayList<Autor> autor = null;
-        ArrayList<Manga> manga = null;
+        ArrayList<Anime> animeL = null;
+        ArrayList<Autor> autorL = null;
+        ArrayList<Manga> mangaL = null;
 
         try {
             // Se crea un ObjectInputStream
             FileInputStream eos = new FileInputStream(fichero);
             MiObjectInputStream ois = new MiObjectInputStream(eos);
             switch (fichero) {
-                case "Anime.txt":
+                case "src/anime/Anime.txt":
 
                     while (eos.read() != -1) {
-                        Anime an = (Anime)ois.readObject();
-                        anime.add(an);
+                        Anime an = (Anime) ois.readObject();
+                        animeL.add(an);
                         ois.close();
                     }
                     break;
-                case "Autor.txt":
+                case "src/anime/Autor.txt":
                     while (eos.read() != -1) {
                         Autor au = (Autor) ois.readObject();
-                        autor.add(au);
+                        autorL.add(au);
                         ois.close();
                     }
                     break;
-                case "Manga.txt":
+                case "src/anime/Manga.txt":
                     while (eos.read() != -1) {
                         Manga ma = (Manga) ois.readObject();
-                        manga.add(ma);
+                        mangaL.add(ma);
                         ois.close();
                     }
                     break;
@@ -129,34 +126,34 @@ public class Metodo {
                 switch (fichero) {
                     case "Anime.txt":
                         if (aux instanceof Anime) {
-                            System.out.println(anime.get(cont).getTitulo() + "\n"
-                                    + anime.get(cont).getAutor() + "\n"
-                                    + anime.get(cont).getCapitulos() + "\n"
-                                    + anime.get(cont).getGenero() + "\n"
-                                    + anime.get(cont).getAnno() + "\n"
-                                    + anime.get(cont).getRating() + "\n"
-                                    + anime.get(cont).getPublicacion() + "\n"
-                                    + anime.get(cont).getAdaptacion() + "\n");
+                            System.out.println(animeL.get(cont).getTitulo() + "\n"
+                                    + animeL.get(cont).getAutor() + "\n"
+                                    + animeL.get(cont).getCapitulos() + "\n"
+                                    + animeL.get(cont).getGenero() + "\n"
+                                    + animeL.get(cont).getAnno() + "\n"
+                                    + animeL.get(cont).getRating() + "\n"
+                                    + animeL.get(cont).getPublicacion() + "\n"
+                                    + animeL.get(cont).getAdaptacion() + "\n");
                         }
                         break;
                     case "Autor.txt":
                         if (aux instanceof Autor) {
-                            System.out.println(autor.get(cont).getNombre() + "\n"
-                                    + autor.get(cont).getBiografia() + "\n"
-                                    + autor.get(cont).getFechaNacimiento() + "\n"
-                                    + autor.get(cont).getEdad() + "\n");
+                            System.out.println(autorL.get(cont).getNombre() + "\n"
+                                    + autorL.get(cont).getBiografia() + "\n"
+                                    + autorL.get(cont).getFechaNacimiento() + "\n"
+                                    + autorL.get(cont).getEdad() + "\n");
                         }
                         break;
                     case "Manga.txt":
                         if (aux instanceof Manga) {
-                            System.out.println(manga.get(cont).getTitulo() + "\n"
-                                    + manga.get(cont).getAutor() + "\n"
-                                    + manga.get(cont).getAutor() + "\n"
-                                    + manga.get(cont).getCapitulos() + "\n"
-                                    + manga.get(cont).getGenero() + "\n"
-                                    + manga.get(cont).getAnno() + "\n"
-                                    + manga.get(cont).getRating() + "\n"
-                                    + manga.get(cont).getPublicadora() + "\n");
+                            System.out.println(mangaL.get(cont).getTitulo() + "\n"
+                                    + mangaL.get(cont).getAutor() + "\n"
+                                    + mangaL.get(cont).getAutor() + "\n"
+                                    + mangaL.get(cont).getCapitulos() + "\n"
+                                    + mangaL.get(cont).getGenero() + "\n"
+                                    + mangaL.get(cont).getAnno() + "\n"
+                                    + mangaL.get(cont).getRating() + "\n"
+                                    + mangaL.get(cont).getPublicadora() + "\n");
                         }
                         break;
                 }

@@ -1,5 +1,6 @@
-package anime;
+package Model;
 
+import anime.Lector;
 import java.io.Serializable;
 
 /**
@@ -7,7 +8,6 @@ import java.io.Serializable;
  * @author sasukeuni
  */
 public class Anime extends Arte implements Serializable {
-
 
     private String adaptacion;
 
@@ -37,6 +37,15 @@ public class Anime extends Arte implements Serializable {
         setPublicacion();
     }
 
+    public void setAdaptacion(String adaptacion) {
+        this.adaptacion = adaptacion;
+    }
+
+    public void setPublicacion(String publicacion) {
+
+        this.publicacion = publicacion;
+    }
+
     public String getAdaptacion() {
         return adaptacion;
     }
@@ -59,7 +68,7 @@ public class Anime extends Arte implements Serializable {
     }
 
     public void setPublicacion() {
-        System.out.println("Que tipo de publicación ha tenido? (tv, ova(original video animation), ona(original net animation), movie, special)");
+        System.out.println("Que tipo de publicación ha tenido? (tv, ova(original video animation), ona(original net animation), movie, special");
         publicacion = Lector.lector();
     }
 }

@@ -1,10 +1,10 @@
-package anime;
+package Model;
 
+import anime.Lector;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Arte implements Serializable {
-
 
     private String anno;
 
@@ -41,6 +41,30 @@ public class Arte implements Serializable {
         setCapitulos();
         setGenero();
         setRating();
+    }
+
+    public void setAnno(String anno) {
+        this.anno = anno;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setCapitulos(String capitulos) {
+        this.capitulos = capitulos;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
     public String getAnno() {

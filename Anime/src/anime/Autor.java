@@ -2,13 +2,9 @@ package anime;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.logging.Logger;
 
-public class Autor implements Serializable{
+public class Autor implements Serializable {
 
-    private static final Logger LOG = Logger.getLogger(Autor.class.getName());
-
-    @SuppressWarnings("PackageVisibleField")
     private static int cont = 0;
     private static final long serialVersionUID = 1L;
 
@@ -19,12 +15,13 @@ public class Autor implements Serializable{
     private LocalDate fechaNacimiento;
 
     private String nombre;
-/**
- * 
- * @param nombre
- * @param fechaNacimiento
- * @param biografia 
- */
+
+    /**
+     *
+     * @param nombre
+     * @param fechaNacimiento
+     * @param biografia
+     */
     public Autor(String nombre, LocalDate fechaNacimiento, String biografia) {
         setCodAutor();
         this.nombre = nombre;
@@ -68,9 +65,10 @@ public class Autor implements Serializable{
         codAutor = cont;
     }
 
-    public Integer getCodAutor(){
+    public Integer getCodAutor() {
         return codAutor;
     }
+
     public void setFechaNacimiento() {
         System.out.println("Cual es la fecha de nacimiento de dicho autor? (YYYY-MM-DD)");
         try {

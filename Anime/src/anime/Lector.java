@@ -13,13 +13,13 @@ import java.util.Scanner;
  */
 public class Lector {
 
-    static String lector() {
+    public static String lector() {
         Scanner dato = new Scanner(System.in);
         String leido = dato.nextLine();
         return leido;
     }
 
-    static int lectorInt() {
+    public static int lectorInt() {
         int leido = -1;
         Scanner dato = new Scanner(System.in);
         if (dato.hasNextInt()) {
@@ -29,7 +29,7 @@ public class Lector {
         return leido;
     }
 
-    static float lectorFloat() {
+    public static float lectorFloat() {
         float leido = -1;
         Scanner dato = new Scanner(System.in);
         if (dato.hasNextFloat()) {

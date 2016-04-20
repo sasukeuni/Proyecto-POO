@@ -33,9 +33,14 @@ public class MiObjectOutputStream extends ObjectOutputStream {
     }
 
     /**
+     * /**
      * Redefinición del método de escribir la cabecera para que no haga nada.
+     *
+     * protected void writeStreamHeader() throws IOException { }
      */
+
     protected void writeStreamHeader() throws IOException {
+        // do not write a header, but reset the handle list
     }
 
 }

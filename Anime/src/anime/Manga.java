@@ -1,12 +1,10 @@
 package anime;
 
 import java.io.Serializable;
-import java.util.logging.Logger;
 
 public class Manga extends Arte implements Serializable {
 
-    private static final Logger LOG = Logger.getLogger(Manga.class.getName());
-    private static final long serialVersionUID = 1L;
+
 
     private String publicadora;
 
@@ -26,12 +24,7 @@ public class Manga extends Arte implements Serializable {
     }
 
     public Manga() {
-        setTitulo();
-        setAutor();
-        setAnno();
-        setCapitulos();
-        setGenero();
-        setRating();
+        super();
         setPublicadora();
     }
 
